@@ -4,9 +4,6 @@ import Providers from "next-auth/providers";
 import { fauna } from "../../../services/fauna";
 
 export default NextAuth({
-  jwt: {
-    signingKey: process.env.JWT_SIGNING_PRIVATE_KEY,
-  },
   providers: [
     Providers.GitHub({
       clientId: process.env.GITHUB_CLIENT_ID,
